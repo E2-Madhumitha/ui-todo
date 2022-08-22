@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="styleedit.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body onload="loadItems();">
+ 
+    <div class="header">
+      <div class=head><span>TODO TASK</span></div>
+      <div class="but"><button onclick="openModal()" id="new">ADD STUDENT</i></button></div>
+    </div>
+    <div class="container">
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>STUDENT NAME</th>
+            <th>STUDENT AGE</th>
+            
+            <th class="functions"> <i class='bx bx-edit' ></i></th>
+            <th class="functions"> <i class='bx bx-trash'></i></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        
+        <form id="formContainer">
+          <div class="modal-header">
+            <p>STUDENT LIST</p>
+            <button type="button" class="modal-close" id="modalClose" onclick="closeForm()">&#10006;</button>
+          </div>
+          <div class="modal-body">
+        <div class="name">
+          <label><p>STUDENT NAME</p></label>
+          <input id="studentName" type="text"  onblur="errorMessage()"onkeyup="errorMessage()" placeholder="Name"required> 
+          <span id="error"></span>
+      </div>
+      <div class="age">
+          <label><p>STUDENT AGE</p></label>
+          <input id="studentAge" type="text" onblur="errorMsg()"onkeyup="errorMsg()" placeholder="Age"required> 
+          <span id="error1"></span>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button  type="submit" onclick="errorMessage(),errorMsg()"  id="btn">SUBMIT</button>
+          
+        </div>
+        
+         
+        </form>
+      </div>
+    </div>
+
+
+    <div>
+
+
+      <div id="id01" class="modal1">
+
+          <form class="modal1-content" >
+              <div class="container1">
+                  <h1>Delete Row</h1>
+                  <p>Are you sure you want to delete your row?</p>
+
+                  <div class="clearfix">
+                      <div class=dbutton1><button type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button></div>
+                     <div class="dbutton2" id="check"></div>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  </div>
+  <script src="scriptedit.js"></script>
+</body>
+
+</html>
+
